@@ -8,7 +8,7 @@ import (
 	"slices"
 	"testing"
 
-	"github.com/kurth4cker/httpserver/server"
+	"github.com/kurth4cker/httpserver/internal/server"
 )
 
 func TestRecordingAndRetrievingWins(t *testing.T) {

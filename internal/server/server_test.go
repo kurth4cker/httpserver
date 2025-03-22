@@ -9,7 +9,7 @@ import (
 	"slices"
 	"testing"
 
-	"github.com/kurth4cker/httpserver/server"
+	"github.com/kurth4cker/httpserver/internal/server"
 )
 
 func TestGetPlayers(t *testing.T) {
