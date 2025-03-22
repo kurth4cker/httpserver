@@ -18,6 +18,14 @@ type InMemoryPlayerStore struct {
 	storeMutex sync.Mutex
 }
 
+func (i *InMemoryPlayerStore) GetLeague() []server.Player {
+	league := make([]server.Player, 0)
+	for name, wins := range i.Store {
+		league = append(league, server.Player{name, wins})
+	}
+	return league
+}
+
 func (i *InMemoryPlayerStore) GetPlayerScore(name string) int {
 	i.storeMutex.Lock()
 	defer i.storeMutex.Unlock()
